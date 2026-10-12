@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <h2 class="logo"><a href="#">Vesper <span style="color:#B8955A;">Atelier</span></a></h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cta">Contact</a></li>
+            <li><a href="#cart"><i class="bi-bag"></i><span id="cart-count">0</span></a></li>
+        </ul>
+
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1 >Scent that stays when you leave the room</h1>
+            <p>Small-batch perfumes built on rare oud, Egyptian jasmine and aged amber. Composed for men, women and
+                everyone between.</p>
+            <a href="#shop" style=" transform: 4px; ; background-color: #B8955A;" class="shopbtn">Shop Now</a>
+            <a href="#collections" style="transform: 4px; " class="explorebtn">Explore Collection</a>
+        </div>
+        <div class="hero-image">
+            <img src="oud-mirage.svg" alt="Oud Mirage" class="hero-image">
+
+        </div>
+
+    </section>
+
+    <section class="shop" id="shop">
+        <div class="catalog">
+            <div class="text">
+                <p style="color:#B8955A;">The Art of Scent</p>
+                <h2>Featured fragrances</h2>
+                <p style="font-size: 25px;">The six bottles our perfumers reach for first.</p>
+            </div>
+
+            <div class="controls">
+                <div class="btnTab">
+                    <button class="tab active" data-filter="all">All</button>
+                    <button class="tab" data-filter="parfumerie Man">Perfumes Man</button>
+                    <button class="tab" data-filter="parfumerie Woman">Perfumes Woman</button>
+                    <button class="tab" data-filter="parfumerie Unisex">Perfumes Unisex</button>
+                </div>
+
+                <select id="sort">
+                    <option value="curated">Default</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+
+
+
+        <div class="products" id="products">
+            <card class="card" data-category="parfumerie Man" data-price="138">
+
+                <img src="cedar-smoke.svg" alt="Cedar &amp; Smoke">
+
+                <p class="category">Perfumes Man</p>
+
+                <h3 style="color:#B8955A;">Cedar &amp; Smoke</h3>
+
+                <p class="desc">Cedar wood, birch tar and black pepper. Deep, smoky and confident.</p>
+
+                <strong class="price">$138</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+            <card class="card" data-category="parfumerie Man" data-price="138">
+
+                <img src="cedar-smoke.svg" alt="Cedar Smoke">
+
+                <p class="category">Perfumes Man</p>
+
+                <h3 style="color:#B8955A;">Cedar &amp; Smoke</h3>
+
+                <p class="desc">Cedar wood, birch tar and black pepper. Deep, smoky and confident.</p>
+
+                <strong class="price">$138</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+            <card class="card" data-category="parfumerie Man" data-price="142">
+                <img src="velvet-vetiver.svg" alt="Velvet Vetiver">
+
+                <p class="category">Perfumes Man</p>
+
+                <h3 style="color:#B8955A;">Velvet Vetiver</h3>
+
+                <p class="desc">Vetiver, cardamom and soft leather. Clean, warm and refined.</p>
+
+                <strong class="price">$142</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+            <card class="card" data-category="parfumerie Woman" data-price="120">
+
+                <img src="rose-interlude.svg" alt="Rose Interlude">
+
+                <p class="category">Perfumes Woman</p>
+
+                <h3 style="color:#B8955A;">Rose Interlude</h3>
+
+                <p class="desc">Damask rose, pink pepper and white musk. Soft and elegant.</p>
+
+                <strong class="price">$120</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+            <card class="card" data-category="parfumerie Woman" data-price="155">
+
+                <img src="midnight-iris.svg" alt="Midnight Iris">
+
+                <p class="category">Perfumes Woman</p>
+
+                <h3 style="color:#B8955A;">Midnight Iris</h3>
+
+                <p class="desc">Iris butter, cassis and cedar. A powdery scent with a dark finish.</p>
+
+                <strong class="price">$155</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+            <card class="card" data-category="parfumerie Unisex" data-price="185">
+
+                <img src="oud-mirage.svg" alt="Oud Mirage">
+
+                <p class="category">Perfumes Unisex</p>
+
+                <h3 style="color:#B8955A;">Oud Mirage</h3>
+
+                <p class="desc">Smoked oud, saffron and amber. Rich and long lasting.</p>
+
+                <strong class="price">$185</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+            <card class="card" data-category="parfumerie Unisex" data-price="98">
+
+                <img src="citrus-meridian.svg" alt="Citrus Meridian">
+
+                <p class="category">Perfumes Unisex</p>
+
+                <h3 style="color:#B8955A;">Citrus Meridian</h3>
+
+                <p class="desc">Bergamot, neroli and white tea. Fresh, light and bright.</p>
+
+                <strong class="price">$98</strong>
+
+                <button class="add-btn">Add to cart</button>
+            </card>
+
+        </div>
+
+    </section>
+
+    <section class="collections" id="collections">
+
+        <div class="collection-text">
+            <h2>Shop by collection</h2>
+            <p>Four ways into the house.</p>
+        </div>
+
+        <div class="cards-collection">
+            <a href="#shop" class="collection-card men">
+                <img src="velvet-vetiver.svg" alt="Men collection">
+                <h3>Men</h3>
+                <p>Woods, vetiver, smoke</p>
+            </a>
+
+            <a href="#shop" class="collection-card women">
+                <img src="rose-interlude.svg" alt="Women collection">
+                <h3>Women</h3>
+                <p>Rose, iris, white musk</p>
+            </a>
+
+            <a href="#shop" class="collection-card unisex">
+                <img src="unisex-green.svg" alt="Unisex collection">
+                <h3>Unisex</h3>
+                <p>Citrus, tea, cedar</p>
+            </a>
+
+            <a href="#shop" class="collection-card luxury">
+                <img src="luxury-gold.svg" alt="Luxury collection">
+                <h3>Luxury</h3>
+                <p>Extraits, 30% oils</p>
+            </a>
+        </div>
+
+
+        <div class="best-sellers-text">
+            <h2 style="color: #B8955A;">Best sellers</h2>
+            <p>What customers reorder.</p>
+        </div>
+        <div class="best-sellers">
+
+            <div class="best-saller-cards">
+                <card class="card" data-category="parfumerie Man" data-price="138">
+
+                    <img src="cedar-smoke.svg" alt="Cedar &amp; Smoke">
+
+                    <p class="category">Perfumes Man</p>
+
+                    <h3 style="color:#B8955A;">Cedar &amp; Smoke</h3>
+
+                    <p class="desc">Cedar wood, birch tar and black pepper. Deep, smoky and confident.</p>
+
+                    <strong class="price">$138</strong>
+
+                    <button class="add-btn">Add to cart</button>
+                </card>
+                <card class="card" data-category="parfumerie Man" data-price="138">
+
+                    <img src="cedar-smoke.svg" alt="Cedar Smoke">
+
+                    <p class="category">Perfumes Man</p>
+
+                    <h3 style="color:#B8955A;">Cedar &amp; Smoke</h3>
+
+                    <p class="desc">Cedar wood, birch tar and black pepper. Deep, smoky and confident.</p>
+
+                    <strong class="price">$138</strong>
+
+                    <button class="add-btn">Add to cart</button>
+                </card>
+
+                <card class="card" data-category="parfumerie Man" data-price="142">
+                    <img src="velvet-vetiver.svg" alt="Velvet Vetiver">
+
+                    <p class="category">Perfumes Man</p>
+
+                    <h3 style="color:#B8955A;">Velvet Vetiver</h3>
+
+                    <p class="desc">Vetiver, cardamom and soft leather. Clean, warm and refined.</p>
+
+                    <strong class="price">$142</strong>
+
+                    <button class="add-btn">Add to cart</button>
+                </card>
+
+                <card class="card" data-category="parfumerie Woman" data-price="120">
+
+                    <img src="rose-interlude.svg" alt="Rose Interlude">
+
+                    <p class="category">Perfumes Woman</p>
+
+                    <h3 style="color:#B8955A;">Rose Interlude</h3>
+
+                    <p class="desc">Damask rose, pink pepper and white musk. Soft and elegant.</p>
+
+                    <strong class="price">$120</strong>
+
+                    <button class="add-btn">Add to cart</button>
+                </card>
+            </div>
+
+        </div>
+    </section>
+    <section class="about" id="about">
+
+        <a href="#home" class="about-card">
+            <div class="card-content-overlay">
+                <img src="cedar-smoke.svg" alt="Men collection">
+
+            </div>
+        </a>
+        <div class="about-text">
+            <h2>Founded on one trip to a Cairo spice market</h2>
+            <p>Vesper Atelier began with a single blend: jasmine from the Nile Delta layered over aged oud. Today every
+                fragrance is mixed in batches of 500 bottles, rested for six weeks, and numbered by hand.</p>
+            <a href="#home" class="discover-btn">Discover Our Story</a>
+        </div>
+    </section>
+    <section class="why">
+        <h2 class="why__title">Why choose Vesper</h2>
+
+        <div class="why__grid">
+            <div class="why__item">
+                <h3>Premium quality</h3>
+                <p>Natural absolutes, no filler alcohol, tested by independent labs.</p>
+            </div>
+            <div class="why__item">
+                <h3>Long-lasting fragrance</h3>
+                <p>Up to 10 hours of wear at 20% concentration or higher.</p>
+            </div>
+            <div class="why__item">
+                <h3>Fast delivery</h3>
+                <p>Ships in 24 hours, arrives in 2–4 days in gift packaging.</p>
+            </div>
+            <div class="why__item">
+                <h3>Secure payment</h3>
+                <p>Encrypted checkout with cards, wallets and cash on delivery.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+
+        <div class="positon">
+            <h2>Discover your signature scent</h2>
+            <p>Join the list for 10% off your first bottle and early access to new batches.</p>
+
+            <form>
+                <input type="email" placeholder="Your email address" required />
+                <button>Subscribe</button>
+            </form>
+        </div>
+
+    </section>
+     <section class="cart">
+        <h1>Your cart</h1>
+        <div id="cart-items"></div>
+        <h2>Total: $<span id="total">0</span></h2>
+    </section>
+
+    <script src="cart.js"></script>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
